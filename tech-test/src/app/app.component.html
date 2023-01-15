@@ -1,2 +1,61 @@
-<h1 class="title-text">Welcome to Origin's Angular Technical Test: {{title}}</h1>
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="header-title">Todo demo</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav>
+      <mat-nav-list>
+        <a mat-list-item routerLink=".">link</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <section>
+        <button class="button" mat-raised-button (click)="addTask()">Add Task</button>
+      </section>
+      <div class="row">
+        <div class="col-9 mr-3">
+          <div
+            cdkDropList
+            #inProgressList="cdkDropList"
+            [cdkDropListData]="inProgress"
+            [cdkDropListConnectedTo]="[doneList]"
+            class="task-list"
+            (cdkDropListDropped)="dropInProgress($event)">
+            <app-task *ngFor="let task of inProgress"
+                      cdkDrag
+                      class="mb-2 mr-2"
+                      [task]="task"
+                      (editClick)="onEditClick(task)"
+                      (deleteClick)="onDeleteClick(task)"
+            ></app-task>
+          </div>
+        </div>
+        <div class="col-3 ml-2">
+          <div
+            cdkDropList
+            #doneList="cdkDropList"
+            [cdkDropListData]="done"
+            [cdkDropListConnectedTo]="[inProgressList]"
+            class="task-list"
+            (cdkDropListDropped)="dropDone($event)">
+            <app-task *ngFor="let task of done"
+                      cdkDrag
+                      class="mb-2 mr-2"
+                      [task]="task"
+                      (editClick)="onEditClick(task)"
+                      (deleteClick)="onDeleteClick(task)"
+            ></app-task>
+          </div>
+        </div>
+      </div>
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
 

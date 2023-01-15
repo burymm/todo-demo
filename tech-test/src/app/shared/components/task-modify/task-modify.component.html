@@ -1,0 +1,18 @@
+<form [formGroup]="form" class="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput formControlName="labelControl">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select formControlName="categoryControl">
+      <mat-option [value]="category" *ngFor="let category of categoryList">{{category}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea formControlName="descriptionControl" matInput></textarea>
+  </mat-form-field>
+</form>
+<button mat-button mat-dialog-close (click)="onCancelClick()">Cancel</button>
+<button mat-button mat-dialog-close cdkFocusInitial (click)="onSaveClick()">Save</button>

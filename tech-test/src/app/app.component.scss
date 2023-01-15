@@ -1,7 +1,12 @@
-.title-text{
-  font-size: 20px;
-  line-height: 1.5;
-  color: #20364b;
-  font-weight: 600;
-  font-family: 'ProximaNova', sans-serif;
+.task-list {
+  justify-content: space-between;
+  background: #ccc;
+  min-height: 220px;
+  min-width: 200px;
+  width: 100%;
+  padding: .5rem;
+  flex-wrap: wrap;
+  display: flex;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }

@@ -1,0 +1,18 @@
+<mat-card class="task-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title
+      >{{ task.label }}</mat-card-title>
+      <mat-card-subtitle>
+        {{ task.category }}
+      </mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    {{ task.description }}
+  </mat-card-content>
+  <div class="button-wrapper">
+    <mat-icon (click)="onEditClick()">edit</mat-icon>
+    <mat-icon (click)="onDeleteClick()">delete</mat-icon>
+  </div>
+</mat-card>

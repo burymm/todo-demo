@@ -1,0 +1,33 @@
+:host {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+
+  &::ng-deep {
+    .mat-card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &.done {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    .button-wrapper {
+      visibility: visible;
+    }
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  visibility: hidden;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: auto;
+
+}

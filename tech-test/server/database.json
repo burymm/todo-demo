@@ -3,16 +3,44 @@
     {
       "id": 1,
       "label": "Kitchen Cleanup",
-      "description":  "Clean my dirty kitchen",
-      "category": "house",
+      "description": "Clean my dirty kitchen",
+      "category": "work",
       "done": false
     },
     {
       "id": 2,
       "label": "Taxes",
-      "description":  "Start doing my taxes and contact my accountant jhon for advice",
+      "description": "Start doing my taxes and contact my accountant jhon for advice",
       "category": "bureaucracy",
-      "done": "22-10-2019"
+      "done": false
+    },
+    {
+      "label": "testrwerewr",
+      "description": "bureaucracy",
+      "category": "sdfdsfsd",
+      "id": 3,
+      "done": "14-01-2023"
+    },
+    {
+      "label": "new",
+      "description": "house",
+      "category": "new1",
+      "done": false,
+      "id": 4
+    },
+    {
+      "label": "Kat",
+      "description": "house",
+      "category": "Andr",
+      "done": false,
+      "id": 6
+    },
+    {
+      "label": "Kat2",
+      "description": "Andr2",
+      "category": "house",
+      "done": "14-01-2023",
+      "id": 7
     }
   ]
 }
